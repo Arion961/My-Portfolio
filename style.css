@@ -1481,6 +1481,64 @@ h3 {
 }
 
 
+.cv-section {
+    background: linear-gradient(115deg, rgba(255, 240, 247, 0.88), rgba(238, 231, 255, 0.72));
+}
+
+.cv-viewer-shell {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+}
+
+.cv-viewer-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 22px;
+    color: var(--color-plum);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cv-viewer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cv-viewer-actions .button {
+    min-height: 42px;
+    padding: 10px 16px;
+    font-size: 11px;
+}
+
+.cv-viewer {
+    display: block;
+    width: 100%;
+    height: clamp(560px, 85vh, 960px);
+    border: 0;
+    background: #f7f3f6;
+}
+
+.cv-viewer-fallback {
+    padding: 12px 20px;
+    color: var(--color-muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.cv-viewer-fallback a {
+    color: var(--color-pink-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
 
 .contact-section {
     padding-top: 100px;
@@ -1868,6 +1926,11 @@ h3 {
 
     .projects-grid {
         gap: 16px;
+    }
+
+    .cv-viewer-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .project-content {
@@ -2272,6 +2335,11 @@ h3 {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .cv-viewer {
+        height: 70vh;
+        min-height: 460px;
     }
 
     .project-art {
